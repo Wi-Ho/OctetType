@@ -21,15 +21,14 @@ class SizeType extends AbstractType
         $builder
             ->add('value', NumberType::class, [
                 'required' => false,
-                'label' => false,
-                
+                'label'    => false,
+
             ])
             ->add('unit', ChoiceType::class, [
                 'required' => true,
                 'choices'  => $choices,
             ])
-            ->addModelTransformer(new SizeTransformer($options['use_binary']))
-        ;
+            ->addModelTransformer(new SizeTransformer($options['use_binary']));
     }
 
     /**
@@ -43,12 +42,12 @@ class SizeType extends AbstractType
         ]);
         $resolver->addAllowedTypes('use_binary', 'bool');
     }
-    
+
     private function getChoices($use_binary)
     {
         if (true === $use_binary) {
             return [
-                'b' => Size::UNIT_B,
+                'b'   => Size::UNIT_B,
                 'kib' => Size::UNIT_KB,
                 'Mib' => Size::UNIT_MB,
                 'Gib' => Size::UNIT_GB,
@@ -57,9 +56,9 @@ class SizeType extends AbstractType
                 'Eib' => Size::UNIT_EB,
             ];
         }
-        
+
         return [
-            'b' => Size::UNIT_B,
+            'b'  => Size::UNIT_B,
             'kb' => Size::UNIT_KB,
             'Mb' => Size::UNIT_MB,
             'Gb' => Size::UNIT_GB,
