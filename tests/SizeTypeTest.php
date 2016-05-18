@@ -56,6 +56,31 @@ class SizeTypeTest extends TypeTestCase
         }
     }
 
+    public function testSubmitValidDataUsingEmptyValue()
+    {
+        $form_data = [
+            'unit'  => Size::UNIT_KB,
+            'value' => null,
+        ];
+
+        $form = $this->factory->create(SizeType::class);
+        $object = new Size();
+        $object->setValue(null);
+        $object->setUnit(Size::UNIT_KB);
+
+        $form->submit($form_data);
+
+        $this->assertTrue($form->isSynchronized());
+        $this->assertEquals(null, $form->getData());
+
+        $view = $form->createView();
+        $children = $view->children;
+
+        foreach (array_keys($form_data) as $key) {
+            $this->assertArrayHasKey($key, $children);
+        }
+    }
+
     /**
      * @dataProvider dataLoadData
      *
@@ -123,6 +148,12 @@ class SizeTypeTest extends TypeTestCase
                 false,
                 100000000,
                 Size::UNIT_EB,
+            ],
+            [
+                null,
+                false,
+                null,
+                Size::UNIT_B,
             ],
         ];
     }

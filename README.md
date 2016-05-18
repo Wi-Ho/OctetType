@@ -5,8 +5,8 @@ Size Type
 [![Coverage Status](https://coveralls.io/repos/github/Wi-Ho/SizeType/badge.svg?branch=master)](https://coveralls.io/github/Wi-Ho/SizeType?branch=master)
 [![Build Status](https://travis-ci.org/Wi-Ho/SizeType.svg?branch=master)](https://travis-ci.org/Wi-Ho/SizeType)
 
-[![HHVM Status](http://hhvm.h4cc.de/badge/wi-ho/size-type.svg?style=flat)](http://hhvm.h4cc.de/package/wi-ho/size-type)
-[![PHP 7 ready](http://php7ready.timesplinter.ch/wi-ho/size-type/badge.svg)](https://travis-ci.org/wi-ho/size-type)
+[![HHVM Status](http://hhvm.h4cc.de/badge/Wi-Ho/Size-Type.svg)](http://hhvm.h4cc.de/package/Wi-Ho/Size-Type)
+[![PHP 7 ready](http://php7ready.timesplinter.ch/Wi-Ho/SizeType/badge.svg)](https://travis-ci.org/Wi-Ho/SizeType)
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/a1f7743d-33b9-433d-8f57-e49e02e4608f/big.png)](https://insight.sensiolabs.com/projects/a1f7743d-33b9-433d-8f57-e49e02e4608f)
 
@@ -31,11 +31,11 @@ This library needs at least:
 
 It has been successfully tested using `PHP 5.6` and `HHVM` and `PHP 7` (including the dev branch).
 
-We also track bugs and code quality using [Scrutinizer-CI](https://scrutinizer-ci.com/g/Wi-Ho/SizeType) and [Sensio Insight](https://insight.sensiolabs.com/projects/9123fbfc-7ae1-4d63-9fda-170b8ad794ee).
+We also track bugs and code quality using [Scrutinizer-CI](https://scrutinizer-ci.com/g/Wi-Ho/SizeType) and [Sensio Insight](https://insight.sensiolabs.com/projects/a1f7743d-33b9-433d-8f57-e49e02e4608f).
 
-Coding Standards are verified by [StyleCI](https://styleci.io/repos/22874677).
+Coding Standards are verified by [StyleCI](https://styleci.io/repos/59129536).
 
-Code coverage is analyzed by [Coveralls.io](https://coveralls.io/github/wi-ho/size-type).
+Code coverage is analyzed by [Coveralls.io](https://coveralls.io/github/Wi-Ho/SizeType).
 
 # Installation
 
