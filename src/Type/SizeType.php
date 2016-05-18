@@ -20,13 +20,14 @@ class SizeType extends AbstractType
         $choices = $this->getChoices($options['use_binary']);
         $builder
             ->add('value', NumberType::class, [
-                'required' => false,
+                'required' => $options['required'],
                 'label'    => false,
 
             ])
             ->add('unit', ChoiceType::class, [
                 'required' => true,
                 'choices'  => $choices,
+                'label'    => false,
             ])
             ->addModelTransformer(new SizeTransformer($options['use_binary']));
     }

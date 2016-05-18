@@ -25,16 +25,13 @@ class SizeTransformer implements DataTransformerInterface
     /**
      * @param int|null $value
      *
-     * @return \SizeType\Form\Data\Size
+     * @return \SizeType\Form\Data\Size|null
      */
     public function transform($value)
     {
         $byte = new Size();
         if (null === $value) {
-            $byte->setValue(null);
-            $byte->setUnit(0);
-
-            return $byte;
+            return;
         }
 
         $unit = intval((log($value) / log($this->getExponent())));

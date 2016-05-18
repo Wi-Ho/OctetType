@@ -81,6 +81,13 @@ class SizeTypeTest extends TypeTestCase
         }
     }
 
+    public function testLoadFromNullValue()
+    {
+        $form = $this->factory->create(SizeType::class, null, ['use_binary' => true]);
+        $this->assertNull($form->getData());
+        $this->assertNull($form->getNormData());
+    }
+
     /**
      * @dataProvider dataLoadData
      *
@@ -148,12 +155,6 @@ class SizeTypeTest extends TypeTestCase
                 false,
                 100000000,
                 Size::UNIT_EB,
-            ],
-            [
-                null,
-                false,
-                null,
-                Size::UNIT_B,
             ],
         ];
     }
