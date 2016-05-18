@@ -55,10 +55,10 @@ class SizeTransformer implements DataTransformerInterface
     public function reverseTransform($value)
     {
         if (null === $value || null === $value->getValue()) {
-            return null;
+            return;
         }
 
-        return intval( $value->getValue() * pow($this->getExponent(),$value->getUnit()) );
+        return intval($value->getValue() * pow($this->getExponent(), $value->getUnit()));
     }
 
     /**
