@@ -47,11 +47,12 @@ composer require wi-ho/size-type
 
 # How to use
 
-Have a look at [How to use](doc/Use.md) to know how to load your JWT and discover all possibilities provided by this library.
+Have a look at [How to use](doc/Use.md) to know how to use it.
 
 # Contributing
 
-Requests for new features, bug fixed and all other ideas to make this library useful are welcome. [Please follow these best practices](doc/Contributing.md).
+Requests for new features, bug fixed and all other ideas to make this library useful are welcome.
+[Please follow these best practices](doc/Contributing.md).
 
 # Licence
 
